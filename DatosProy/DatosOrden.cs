@@ -29,6 +29,7 @@ namespace DatosProy
                         FechaIngreso = DateTime.Parse(item["FechaIngreso"].ToString())
 
                     };
+                    lista.Add(orden);
                 }
                 return lista;
 

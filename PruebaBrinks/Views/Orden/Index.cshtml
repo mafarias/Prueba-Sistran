@@ -6,9 +6,9 @@
 
 <h2>Index</h2>
 
-<p class="btn-default">
-    @Html.ActionLink("Crear Nuevo", "Create")
-</p>
+<div  >
+    <li>@Html.ActionLink("Crear Nuevo", "Create") </li> 
+</div>
 <table class="table">
     <tr>
         <th>
@@ -40,10 +40,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.producto)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-           
-        </td>
+        
     </tr>
 }
 
