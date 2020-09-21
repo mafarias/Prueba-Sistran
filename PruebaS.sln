@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaBrinks", "PruebaBrinks\PruebaBrinks.csproj", "{70C9EC40-C11E-4782-AACA-A46B8B9CCC5C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaS", "PruebaBrinks\PruebaS.csproj", "{70C9EC40-C11E-4782-AACA-A46B8B9CCC5C}"
 	ProjectSection(ProjectDependencies) = postProject
 		{2013C1E6-EC04-4CDB-9580-EDE733A064C9} = {2013C1E6-EC04-4CDB-9580-EDE733A064C9}
 	EndProjectSection
