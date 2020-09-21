@@ -6,7 +6,8 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using Dominio;
-using Datos;
+
+using DatosProy;
 
 
 namespace WcfService
@@ -20,14 +21,14 @@ namespace WcfService
             try
             {
                 List<Orden> list = new List<Orden>();
-                DatosOrden datos = new Datos.DatosOrden();
+                DatosOrden datos = new DatosOrden();
                 list = datos.consultaordenes();
                 return list;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex ;
             }
            
 

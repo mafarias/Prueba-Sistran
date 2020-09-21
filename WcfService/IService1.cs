@@ -6,7 +6,8 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using Dominio;
-using Datos;
+using DatosProy;
+
 
 namespace WcfService
 {

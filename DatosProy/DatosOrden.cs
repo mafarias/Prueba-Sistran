@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using AccesoDatos;
 using Dominio;
 
-
-
-namespace Datos
+namespace DatosProy
 {
-    public class DatosOrden : DAL
+    public class DatosOrden :DAL
     {
         public List<Orden> consultaordenes()
         {
@@ -35,7 +37,7 @@ namespace Datos
             catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
 
@@ -43,10 +45,10 @@ namespace Datos
         {
             try
             {
-                Parametro cliente = new Parametro("Cliente", DbType.String, orden.Cliente);
-                Parametro Fecha = new Parametro("Fecha", DbType.DateTime, orden.FechaIngreso);
-                Parametro producto = new Parametro("Producto", DbType.String, orden.producto);
-                Parametro oficina = new Parametro("Oficina", DbType.String, orden.producto);
+                Parametro cliente = new Parametro("@Cliente", DbType.String, orden.Cliente);
+                Parametro Fecha = new Parametro("@FechaIngreso", DbType.DateTime, orden.FechaIngreso);
+                Parametro producto = new Parametro("@Producto", DbType.String, orden.producto);
+                Parametro oficina = new Parametro("@Oficina", DbType.String, orden.producto);
 
                 int i = Insertar("SP_CrearOrden", cliente, Fecha, producto, oficina);
                 return i;
@@ -54,9 +56,8 @@ namespace Datos
             catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
-
     }
 }
