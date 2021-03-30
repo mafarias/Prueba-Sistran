@@ -44,7 +44,6 @@ namespace AccesoDatos
 
         }
 
-
         public DbTransaction CrearTransaccion(IsolationLevel nivelAislamiento = IsolationLevel.ReadCommitted)
         {
             DbConnection conexion = this.BaseDatos.CreateConnection();
@@ -86,19 +85,7 @@ namespace AccesoDatos
             return Convert.ToInt32(this.Escalar(nombreProcedimiento, parametros));
         }
 
-        /// <summary>
-        /// Inserta un registro ejecutando un procedimiento almacenado con parametros
-        /// </summary>
-        /// <param name="transaccion">Transaccion.</param>
-        /// <param name="nombreProcedimiento">El nombre del procedimiento almacenado.</param>
-        /// <param name="parametros">Los parametros.</param>
-        /// <returns>
-        /// Autonuumerico generado por la base de datos
-        /// </returns>
-        /// <remarks>
-        /// Autor: Miguel Escamilla - CIELINGENIERIA\mescamilla 
-        /// FechaDeCreacion: 07/05/2015
-        /// </remarks>
+        
         public int Insertar(DbTransaction transaccion, string nombreProcedimiento, params Parametro[] parametros)
         {
             return Convert.ToInt32(this.Escalar(transaccion, nombreProcedimiento, parametros));
